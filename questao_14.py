@@ -14,12 +14,13 @@ precos = {
 total = 0
 
 while cod_prod != 0:
-
-  if (cod_prod in precos):
-    total += precos[cod_prod]
+  
+  if (cod_prod in precos): 
+    quantidade = int(input('\nInforme a quantidade: '))
+    total += quantidade * precos[cod_prod]
   else:
     print('Código inválido\n')
 
-  cod_prod = int(input('Informe o código do produto ou 0 para encerrar: '))
+  cod_prod = int(input('\nInforme o código do produto ou 0 para encerrar: '))
 
 print(f'\nTotal das compras: R$ {total}')
